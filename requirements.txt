@@ -1,0 +1,10 @@
+bert-score
+fastapi
+uvicorn[standard]
+pydantic
+pydantic-settings
+httpx
+pandas
+pyodbc
+python-dotenv
+pytest

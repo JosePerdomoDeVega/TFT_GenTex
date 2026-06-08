@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GenTex · Generación automática de informes</title>
+  <link rel="icon" type="image/svg+xml" href="/applications/ui/favicon.ico">
+  <link rel="stylesheet" href="/applications/ui/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo">GenTex</span>
+      <span class="subtitle">Automatización de análisis de textos de farmacias</span>
+    </div>
+    <div class="api-status" id="api-status">
+      <span class="dot" id="status-dot"></span>
+      <span id="status-text">Comprobando API…</span>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="card config">
+      <h2>1 · Lanzar generación</h2>
+      <p class="hint">
+        Introduce el identificador del análisis y selecciona los indicadores a
+        procesar. El sistema extraerá los datos, generará los textos con IA y
+        compondrá una conclusión global.
+      </p>
+
+      <form id="conclusion-form">
+        <label for="ax_id">Identificador del análisis (ax_id)</label>
+        <input type="text" id="ax_id" name="ax_id" placeholder="OF00053_2" required>
+
+        <fieldset class="indicators">
+          <legend>Indicadores</legend>
+          <label><input type="checkbox" value="devoluciones" checked> Devoluciones</label>
+          <label><input type="checkbox" value="deuda" checked> Deuda</label>
+          <label><input type="checkbox" value="codigos_propios" checked> Códigos propios</label>
+          <label><input type="checkbox" value="pvp" checked> Cambios de PVP</label>
+          <label><input type="checkbox" value="recetas" checked> Recetas</label>
+          <label><input type="checkbox" value="stock" checked> Stock</label>
+        </fieldset>
+
+        <div class="actions">
+          <button type="button" id="select-all" class="ghost">Seleccionar todos</button>
+          <button type="submit" id="run-btn" class="primary">Generar informe</button>
+        </div>
+      </form>
+
+      <div id="progress" class="progress hidden">
+        <div class="spinner"></div>
+        <span id="progress-text">Generando informes…</span>
+      </div>
+      <div id="error-box" class="error-box hidden"></div>
+    </section>
+
+    <section class="card results">
+      <div class="results-header">
+        <h2>2 · Revisión y validación</h2>
+        <div class="results-meta" id="results-meta"></div>
+      </div>
+
+      <div id="empty-state" class="empty-state">
+        <p>Aún no se ha generado ningún informe.</p>
+        <p class="hint">Los textos generados aparecerán aquí y podrás editarlos antes de darlos por válidos.</p>
+      </div>
+
+      <div id="reports" class="reports"></div>
+
+      <div id="conclusion-block" class="conclusion-block hidden">
+        <h3>Conclusión global</h3>
+        <textarea id="conclusion-text" rows="10"></textarea>
+      </div>
+
+      <div id="results-actions" class="results-actions hidden">
+        <button type="button" id="copy-btn" class="ghost">Copiar todo</button>
+        <button type="button" id="download-btn" class="primary">Descargar informe (.txt)</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>TFT · Grado en Ciencia e Ingeniería de Datos · ULPGC</span>
+    <a href="/docs" target="_blank" rel="noopener">Documentación de la API</a>
+  </footer>
+
+  <script src="/applications/ui/app.js"></script>
+</body>
+</html>
