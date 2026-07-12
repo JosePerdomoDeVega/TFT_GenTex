@@ -20,6 +20,8 @@ def filter_deuda(df: pd.DataFrame, ax_id: str, start, end, total_deuda: float) -
     usuarios_deuda = filtered_df.groupby("usuario")["variacion_deuda"].agg(["sum", "count"]).reset_index()
     usuarios_deuda.columns = ["Usuario", "Deuda Generada", "Transacciones"]
 
+    filtered_df["variacion_deuda"] = pd.to_numeric(filtered_df["variacion_deuda"], errors="coerce")
+
     deuda_por_cuenta = filtered_df.groupby("cc_of")["variacion_deuda"].sum().reset_index()
     top_3 = deuda_por_cuenta.nlargest(3, "variacion_deuda")
     bottom_3 = deuda_por_cuenta.nsmallest(3, "variacion_deuda")

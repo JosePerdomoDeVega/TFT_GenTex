@@ -51,9 +51,13 @@ function setLoading(loading, label = "Generando informes…") {
 }
 
 // ---------- Render de resultados ----------
+let currentAxId = null;
+
 function renderReports(data) {
   $("#empty-state").classList.add("hidden");
   $("#results-meta").textContent = `Análisis ${data.ax_id} · ${data.reports.length} indicador(es)`;
+
+  currentAxId = data.ax_id;
 
   const container = $("#reports");
   container.innerHTML = "";
@@ -62,6 +66,7 @@ function renderReports(data) {
     const label = INDICATOR_LABELS[report.indicator] || report.indicator;
     const card = document.createElement("div");
     card.className = "report";
+    card.dataset.indicator = report.indicator;
     card.innerHTML = `
       <div class="report-head">
         <span class="report-title">${label}</span>
@@ -96,6 +101,49 @@ function collectFullReport() {
   });
   out += `### Conclusión global\n${$("#conclusion-text").value}\n`;
   return out;
+}
+
+function collectValidationPayload() {
+  const reports = [...document.querySelectorAll(".report")].map((card) => ({
+    indicator: card.dataset.indicator,
+    text: card.querySelector("textarea").value,
+  }));
+  return { ax_id: currentAxId, reports, conclusion: $("#conclusion-text").value };
+}
+
+// ---------- Validar y guardar en la base de datos ----------
+async function saveValidated() {
+  clearError();
+  const btn = $("#save-btn");
+  btn.disabled = true;
+  btn.textContent = "Guardando…";
+
+  try {
+    const res = await fetch("/conclusions/validate", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(collectValidationPayload()),
+    });
+
+    if (!res.ok) {
+      const detail = await res.text();
+      throw new Error(`Error ${res.status}: ${detail}`);
+    }
+
+    document.querySelectorAll("[data-badge]").forEach((badge) => {
+      badge.classList.add("valid");
+      badge.textContent = "Validado";
+    });
+    btn.textContent = "Guardado ✓";
+    setTimeout(() => {
+      btn.textContent = "Validar y guardar";
+      btn.disabled = false;
+    }, 2000);
+  } catch (err) {
+    showError(err.message || "No se pudo guardar el informe.");
+    btn.textContent = "Validar y guardar";
+    btn.disabled = false;
+  }
 }
 
 // ---------- Lanzar el proceso ----------
@@ -141,6 +189,8 @@ function init() {
     boxes.forEach((cb) => (cb.checked = !allChecked));
     $("#select-all").textContent = allChecked ? "Seleccionar todos" : "Quitar todos";
   });
+
+  $("#save-btn").addEventListener("click", saveValidated);
 
   $("#copy-btn").addEventListener("click", async () => {
     await navigator.clipboard.writeText(collectFullReport());

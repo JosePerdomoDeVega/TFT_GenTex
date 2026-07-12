@@ -1,0 +1,1100 @@
+[
+  {
+    "ax_id": "OF00002_14",
+    "mode": "sequential",
+    "repeat": 1,
+    "total_seconds": 100.64983820007183,
+    "prompt_tokens": 14427,
+    "completion_tokens": 3316,
+    "total_tokens": 17743,
+    "phases": [
+      {
+        "phase": "get_analysis_period",
+        "seconds": 0.9758037999272346,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      {
+        "phase": "get_indicator_data[devoluciones]",
+        "seconds": 1.8579605999402702,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      {
+        "phase": "write_report[devoluciones]",
+        "seconds": 6.448882799828425,
+        "prompt_tokens": 2918,
+        "completion_tokens": 623,
+        "total_tokens": 3541
+      },
+      {
+        "phase": "get_indicator_data[deuda]",
+        "seconds": 1.6388068997766823,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      {
+        "phase": "write_report[deuda]",
+        "seconds": 4.083914899965748,
+        "prompt_tokens": 1986,
+        "completion_tokens": 441,
+        "total_tokens": 2427
+      },
+      {
+        "phase": "get_indicator_data[codigos_propios]",
+        "seconds": 0.6222148998640478,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      {
+        "phase": "write_report[codigos_propios]",
+        "seconds": 4.0640887001063675,
+        "prompt_tokens": 2900,
+        "completion_tokens": 467,
+        "total_tokens": 3367
+      },
+      {
+        "phase": "get_indicator_data[pvp]",
+        "seconds": 0.6286924001760781,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      {
+        "phase": "write_report[pvp]",
+        "seconds": 3.2714569000527263,
+        "prompt_tokens": 1794,
+        "completion_tokens": 390,
+        "total_tokens": 2184
+      },
+      {
+        "phase": "get_indicator_data[recetas]",
+        "seconds": 61.657200099900365,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      {
+        "phase": "write_report[recetas]",
+        "seconds": 2.2323557999916375,
+        "prompt_tokens": 814,
+        "completion_tokens": 115,
+        "total_tokens": 929
+      },
+      {
+        "phase": "get_indicator_data[stock]",
+        "seconds": 0.3134222999215126,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      {
+        "phase": "write_report[stock]",
+        "seconds": 6.052861399948597,
+        "prompt_tokens": 1352,
+        "completion_tokens": 455,
+        "total_tokens": 1807
+      },
+      {
+        "phase": "write_conclusion",
+        "seconds": 6.801476999884471,
+        "prompt_tokens": 2663,
+        "completion_tokens": 825,
+        "total_tokens": 3488
+      }
+    ]
+  },
+  {
+    "ax_id": "OF00002_14",
+    "mode": "sequential",
+    "repeat": 2,
+    "total_seconds": 100.62008979986422,
+    "prompt_tokens": 14291,
+    "completion_tokens": 2946,
+    "total_tokens": 17237,
+    "phases": [
+      {
+        "phase": "get_analysis_period",
+        "seconds": 0.3863355000503361,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      {
+        "phase": "get_indicator_data[devoluciones]",
+        "seconds": 1.6815126000437886,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      {
+        "phase": "write_report[devoluciones]",
+        "seconds": 3.8726270000915974,
+        "prompt_tokens": 2918,
+        "completion_tokens": 426,
+        "total_tokens": 3344
+      },
+      {
+        "phase": "get_indicator_data[deuda]",
+        "seconds": 1.8165031999815255,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      {
+        "phase": "write_report[deuda]",
+        "seconds": 4.9975076001137495,
+        "prompt_tokens": 1986,
+        "completion_tokens": 561,
+        "total_tokens": 2547
+      },
+      {
+        "phase": "get_indicator_data[codigos_propios]",
+        "seconds": 0.6024917999748141,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      {
+        "phase": "write_report[codigos_propios]",
+        "seconds": 4.249615000095218,
+        "prompt_tokens": 2900,
+        "completion_tokens": 488,
+        "total_tokens": 3388
+      },
+      {
+        "phase": "get_indicator_data[pvp]",
+        "seconds": 0.65538559993729,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      {
+        "phase": "write_report[pvp]",
+        "seconds": 3.3189743999391794,
+        "prompt_tokens": 1794,
+        "completion_tokens": 417,
+        "total_tokens": 2211
+      },
+      {
+        "phase": "get_indicator_data[recetas]",
+        "seconds": 66.5107051001396,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      {
+        "phase": "write_report[recetas]",
+        "seconds": 2.1313103998545557,
+        "prompt_tokens": 814,
+        "completion_tokens": 117,
+        "total_tokens": 931
+      },
+      {
+        "phase": "get_indicator_data[stock]",
+        "seconds": 0.3104489999823272,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      {
+        "phase": "write_report[stock]",
+        "seconds": 5.095421299804002,
+        "prompt_tokens": 1352,
+        "completion_tokens": 346,
+        "total_tokens": 1698
+      },
+      {
+        "phase": "write_conclusion",
+        "seconds": 4.990838400088251,
+        "prompt_tokens": 2527,
+        "completion_tokens": 591,
+        "total_tokens": 3118
+      }
+    ]
+  },
+  {
+    "ax_id": "OF00002_14",
+    "mode": "sequential",
+    "repeat": 3,
+    "total_seconds": 98.57120810006745,
+    "prompt_tokens": 14162,
+    "completion_tokens": 2737,
+    "total_tokens": 16899,
+    "phases": [
+      {
+        "phase": "get_analysis_period",
+        "seconds": 0.38690009992569685,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      {
+        "phase": "get_indicator_data[devoluciones]",
+        "seconds": 1.587420399999246,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      {
+        "phase": "write_report[devoluciones]",
+        "seconds": 3.662531499983743,
+        "prompt_tokens": 2918,
+        "completion_tokens": 378,
+        "total_tokens": 3296
+      },
+      {
+        "phase": "get_indicator_data[deuda]",
+        "seconds": 1.6546290998812765,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      {
+        "phase": "write_report[deuda]",
+        "seconds": 4.413833299884573,
+        "prompt_tokens": 1986,
+        "completion_tokens": 480,
+        "total_tokens": 2466
+      },
+      {
+        "phase": "get_indicator_data[codigos_propios]",
+        "seconds": 0.6032195000443608,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      {
+        "phase": "write_report[codigos_propios]",
+        "seconds": 4.176968600135297,
+        "prompt_tokens": 2900,
+        "completion_tokens": 488,
+        "total_tokens": 3388
+      },
+      {
+        "phase": "get_indicator_data[pvp]",
+        "seconds": 0.633294700179249,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      {
+        "phase": "write_report[pvp]",
+        "seconds": 3.9832318001426756,
+        "prompt_tokens": 1794,
+        "completion_tokens": 449,
+        "total_tokens": 2243
+      },
+      {
+        "phase": "get_indicator_data[recetas]",
+        "seconds": 62.61425539990887,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      {
+        "phase": "write_report[recetas]",
+        "seconds": 3.1062826002016664,
+        "prompt_tokens": 814,
+        "completion_tokens": 104,
+        "total_tokens": 918
+      },
+      {
+        "phase": "get_indicator_data[stock]",
+        "seconds": 0.3105525001883507,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      {
+        "phase": "write_report[stock]",
+        "seconds": 4.40563609986566,
+        "prompt_tokens": 1352,
+        "completion_tokens": 327,
+        "total_tokens": 1679
+      },
+      {
+        "phase": "write_conclusion",
+        "seconds": 7.032055700197816,
+        "prompt_tokens": 2398,
+        "completion_tokens": 511,
+        "total_tokens": 2909
+      }
+    ]
+  },
+  {
+    "ax_id": "OF00002_14",
+    "mode": "parallel",
+    "repeat": 1,
+    "total_seconds": 80.8265186001081,
+    "prompt_tokens": 14120,
+    "completion_tokens": 2662,
+    "total_tokens": 16782,
+    "phases": [
+      {
+        "phase": "get_analysis_period",
+        "seconds": 0.38838960020802915,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      {
+        "phase": "get_indicator_data_all",
+        "seconds": 69.66247450001538,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      {
+        "phase": "write_report[devoluciones]",
+        "seconds": 0.9420620333403349,
+        "prompt_tokens": 2918,
+        "completion_tokens": 401,
+        "total_tokens": 3319
+      },
+      {
+        "phase": "write_report[deuda]",
+        "seconds": 0.9420620333403349,
+        "prompt_tokens": 1986,
+        "completion_tokens": 435,
+        "total_tokens": 2421
+      },
+      {
+        "phase": "write_report[codigos_propios]",
+        "seconds": 0.9420620333403349,
+        "prompt_tokens": 2900,
+        "completion_tokens": 439,
+        "total_tokens": 3339
+      },
+      {
+        "phase": "write_report[pvp]",
+        "seconds": 0.9420620333403349,
+        "prompt_tokens": 1794,
+        "completion_tokens": 416,
+        "total_tokens": 2210
+      },
+      {
+        "phase": "write_report[recetas]",
+        "seconds": 0.9420620333403349,
+        "prompt_tokens": 814,
+        "completion_tokens": 99,
+        "total_tokens": 913
+      },
+      {
+        "phase": "write_report[stock]",
+        "seconds": 0.9420620333403349,
+        "prompt_tokens": 1352,
+        "completion_tokens": 394,
+        "total_tokens": 1746
+      },
+      {
+        "phase": "write_conclusion",
+        "seconds": 5.123177599860355,
+        "prompt_tokens": 2356,
+        "completion_tokens": 478,
+        "total_tokens": 2834
+      }
+    ]
+  },
+  {
+    "ax_id": "OF00002_14",
+    "mode": "parallel",
+    "repeat": 2,
+    "total_seconds": 82.69666210003197,
+    "prompt_tokens": 14047,
+    "completion_tokens": 2598,
+    "total_tokens": 16645,
+    "phases": [
+      {
+        "phase": "get_analysis_period",
+        "seconds": 0.39143169997259974,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      {
+        "phase": "get_indicator_data_all",
+        "seconds": 70.16650000005029,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      {
+        "phase": "write_report[devoluciones]",
+        "seconds": 0.9155296833099177,
+        "prompt_tokens": 2918,
+        "completion_tokens": 464,
+        "total_tokens": 3382
+      },
+      {
+        "phase": "write_report[deuda]",
+        "seconds": 0.9155296833099177,
+        "prompt_tokens": 1986,
+        "completion_tokens": 503,
+        "total_tokens": 2489
+      },
+      {
+        "phase": "write_report[codigos_propios]",
+        "seconds": 0.9155296833099177,
+        "prompt_tokens": 2900,
+        "completion_tokens": 467,
+        "total_tokens": 3367
+      },
+      {
+        "phase": "write_report[pvp]",
+        "seconds": 0.9155296833099177,
+        "prompt_tokens": 1794,
+        "completion_tokens": 313,
+        "total_tokens": 2107
+      },
+      {
+        "phase": "write_report[recetas]",
+        "seconds": 0.9155296833099177,
+        "prompt_tokens": 814,
+        "completion_tokens": 80,
+        "total_tokens": 894
+      },
+      {
+        "phase": "write_report[stock]",
+        "seconds": 0.9155296833099177,
+        "prompt_tokens": 1352,
+        "completion_tokens": 284,
+        "total_tokens": 1636
+      },
+      {
+        "phase": "write_conclusion",
+        "seconds": 6.645465599838644,
+        "prompt_tokens": 2283,
+        "completion_tokens": 487,
+        "total_tokens": 2770
+      }
+    ]
+  },
+  {
+    "ax_id": "OF00002_14",
+    "mode": "parallel",
+    "repeat": 3,
+    "total_seconds": 79.88050449988805,
+    "prompt_tokens": 14282,
+    "completion_tokens": 2873,
+    "total_tokens": 17155,
+    "phases": [
+      {
+        "phase": "get_analysis_period",
+        "seconds": 0.3833071000408381,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      {
+        "phase": "get_indicator_data_all",
+        "seconds": 66.83821090008132,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      {
+        "phase": "write_report[devoluciones]",
+        "seconds": 0.9576156166537354,
+        "prompt_tokens": 2918,
+        "completion_tokens": 528,
+        "total_tokens": 3446
+      },
+      {
+        "phase": "write_report[deuda]",
+        "seconds": 0.9576156166537354,
+        "prompt_tokens": 1986,
+        "completion_tokens": 484,
+        "total_tokens": 2470
+      },
+      {
+        "phase": "write_report[codigos_propios]",
+        "seconds": 0.9576156166537354,
+        "prompt_tokens": 2900,
+        "completion_tokens": 495,
+        "total_tokens": 3395
+      },
+      {
+        "phase": "write_report[pvp]",
+        "seconds": 0.9576156166537354,
+        "prompt_tokens": 1794,
+        "completion_tokens": 433,
+        "total_tokens": 2227
+      },
+      {
+        "phase": "write_report[recetas]",
+        "seconds": 0.9576156166537354,
+        "prompt_tokens": 814,
+        "completion_tokens": 100,
+        "total_tokens": 914
+      },
+      {
+        "phase": "write_report[stock]",
+        "seconds": 0.9576156166537354,
+        "prompt_tokens": 1352,
+        "completion_tokens": 306,
+        "total_tokens": 1658
+      },
+      {
+        "phase": "write_conclusion",
+        "seconds": 6.913172600092366,
+        "prompt_tokens": 2518,
+        "completion_tokens": 527,
+        "total_tokens": 3045
+      }
+    ]
+  },
+  {
+    "ax_id": "OF00002_13",
+    "mode": "sequential",
+    "repeat": 1,
+    "total_seconds": 98.62506019999273,
+    "prompt_tokens": 14093,
+    "completion_tokens": 2662,
+    "total_tokens": 16755,
+    "phases": [
+      {
+        "phase": "get_analysis_period",
+        "seconds": 0.38627969985827804,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      {
+        "phase": "get_indicator_data[devoluciones]",
+        "seconds": 1.5545191001147032,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      {
+        "phase": "write_report[devoluciones]",
+        "seconds": 4.115866200067103,
+        "prompt_tokens": 2918,
+        "completion_tokens": 451,
+        "total_tokens": 3369
+      },
+      {
+        "phase": "get_indicator_data[deuda]",
+        "seconds": 1.6596212000586092,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      {
+        "phase": "write_report[deuda]",
+        "seconds": 3.8031575998757035,
+        "prompt_tokens": 1987,
+        "completion_tokens": 393,
+        "total_tokens": 2380
+      },
+      {
+        "phase": "get_indicator_data[codigos_propios]",
+        "seconds": 0.5639869999140501,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      {
+        "phase": "write_report[codigos_propios]",
+        "seconds": 4.147593500092626,
+        "prompt_tokens": 2900,
+        "completion_tokens": 478,
+        "total_tokens": 3378
+      },
+      {
+        "phase": "get_indicator_data[pvp]",
+        "seconds": 0.6388784998562187,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      {
+        "phase": "write_report[pvp]",
+        "seconds": 3.3237197999842465,
+        "prompt_tokens": 1775,
+        "completion_tokens": 402,
+        "total_tokens": 2177
+      },
+      {
+        "phase": "get_indicator_data[recetas]",
+        "seconds": 64.82650929992087,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      {
+        "phase": "write_report[recetas]",
+        "seconds": 2.1583455000072718,
+        "prompt_tokens": 814,
+        "completion_tokens": 104,
+        "total_tokens": 918
+      },
+      {
+        "phase": "get_indicator_data[stock]",
+        "seconds": 0.30588530004024506,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      {
+        "phase": "write_report[stock]",
+        "seconds": 4.831383799901232,
+        "prompt_tokens": 1350,
+        "completion_tokens": 349,
+        "total_tokens": 1699
+      },
+      {
+        "phase": "write_conclusion",
+        "seconds": 6.308826399967074,
+        "prompt_tokens": 2349,
+        "completion_tokens": 485,
+        "total_tokens": 2834
+      }
+    ]
+  },
+  {
+    "ax_id": "OF00002_13",
+    "mode": "sequential",
+    "repeat": 2,
+    "total_seconds": 98.69863780005835,
+    "prompt_tokens": 14395,
+    "completion_tokens": 3014,
+    "total_tokens": 17409,
+    "phases": [
+      {
+        "phase": "get_analysis_period",
+        "seconds": 0.3918339000083506,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      {
+        "phase": "get_indicator_data[devoluciones]",
+        "seconds": 1.5620684998575598,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      {
+        "phase": "write_report[devoluciones]",
+        "seconds": 4.556219699792564,
+        "prompt_tokens": 2918,
+        "completion_tokens": 486,
+        "total_tokens": 3404
+      },
+      {
+        "phase": "get_indicator_data[deuda]",
+        "seconds": 1.691615500021726,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      {
+        "phase": "write_report[deuda]",
+        "seconds": 5.19340300001204,
+        "prompt_tokens": 1987,
+        "completion_tokens": 516,
+        "total_tokens": 2503
+      },
+      {
+        "phase": "get_indicator_data[codigos_propios]",
+        "seconds": 0.6262737000361085,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      {
+        "phase": "write_report[codigos_propios]",
+        "seconds": 4.088660100009292,
+        "prompt_tokens": 2900,
+        "completion_tokens": 472,
+        "total_tokens": 3372
+      },
+      {
+        "phase": "get_indicator_data[pvp]",
+        "seconds": 0.6143058999441564,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      {
+        "phase": "write_report[pvp]",
+        "seconds": 4.100599899888039,
+        "prompt_tokens": 1775,
+        "completion_tokens": 524,
+        "total_tokens": 2299
+      },
+      {
+        "phase": "get_indicator_data[recetas]",
+        "seconds": 64.7005978000816,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      {
+        "phase": "write_report[recetas]",
+        "seconds": 2.308104599826038,
+        "prompt_tokens": 814,
+        "completion_tokens": 119,
+        "total_tokens": 933
+      },
+      {
+        "phase": "get_indicator_data[stock]",
+        "seconds": 0.31254119984805584,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      {
+        "phase": "write_report[stock]",
+        "seconds": 4.704713699873537,
+        "prompt_tokens": 1350,
+        "completion_tokens": 362,
+        "total_tokens": 1712
+      },
+      {
+        "phase": "write_conclusion",
+        "seconds": 3.8472578001674265,
+        "prompt_tokens": 2651,
+        "completion_tokens": 535,
+        "total_tokens": 3186
+      }
+    ]
+  },
+  {
+    "ax_id": "OF00002_13",
+    "mode": "sequential",
+    "repeat": 3,
+    "total_seconds": 99.86401330004446,
+    "prompt_tokens": 14114,
+    "completion_tokens": 2776,
+    "total_tokens": 16890,
+    "phases": [
+      {
+        "phase": "get_analysis_period",
+        "seconds": 0.3833157999906689,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      {
+        "phase": "get_indicator_data[devoluciones]",
+        "seconds": 1.5870403000153601,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      {
+        "phase": "write_report[devoluciones]",
+        "seconds": 4.4111579998862,
+        "prompt_tokens": 2918,
+        "completion_tokens": 501,
+        "total_tokens": 3419
+      },
+      {
+        "phase": "get_indicator_data[deuda]",
+        "seconds": 1.6975824001710862,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      {
+        "phase": "write_report[deuda]",
+        "seconds": 4.229210200021043,
+        "prompt_tokens": 1987,
+        "completion_tokens": 457,
+        "total_tokens": 2444
+      },
+      {
+        "phase": "get_indicator_data[codigos_propios]",
+        "seconds": 0.5656173001043499,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      {
+        "phase": "write_report[codigos_propios]",
+        "seconds": 4.182220499962568,
+        "prompt_tokens": 2900,
+        "completion_tokens": 466,
+        "total_tokens": 3366
+      },
+      {
+        "phase": "get_indicator_data[pvp]",
+        "seconds": 0.6374218999408185,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      {
+        "phase": "write_report[pvp]",
+        "seconds": 3.2417360998224467,
+        "prompt_tokens": 1775,
+        "completion_tokens": 356,
+        "total_tokens": 2131
+      },
+      {
+        "phase": "get_indicator_data[recetas]",
+        "seconds": 64.00442519993521,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      {
+        "phase": "write_report[recetas]",
+        "seconds": 2.3035265000071377,
+        "prompt_tokens": 814,
+        "completion_tokens": 107,
+        "total_tokens": 921
+      },
+      {
+        "phase": "get_indicator_data[stock]",
+        "seconds": 0.31004350003786385,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      {
+        "phase": "write_report[stock]",
+        "seconds": 4.295707900077105,
+        "prompt_tokens": 1350,
+        "completion_tokens": 311,
+        "total_tokens": 1661
+      },
+      {
+        "phase": "write_conclusion",
+        "seconds": 8.014696900034323,
+        "prompt_tokens": 2370,
+        "completion_tokens": 578,
+        "total_tokens": 2948
+      }
+    ]
+  },
+  {
+    "ax_id": "OF00002_13",
+    "mode": "parallel",
+    "repeat": 1,
+    "total_seconds": 80.40663470001891,
+    "prompt_tokens": 14086,
+    "completion_tokens": 2875,
+    "total_tokens": 16961,
+    "phases": [
+      {
+        "phase": "get_analysis_period",
+        "seconds": 0.3934050998650491,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      {
+        "phase": "get_indicator_data_all",
+        "seconds": 69.40514789987355,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      {
+        "phase": "write_report[devoluciones]",
+        "seconds": 0.879485383319358,
+        "prompt_tokens": 2918,
+        "completion_tokens": 465,
+        "total_tokens": 3383
+      },
+      {
+        "phase": "write_report[deuda]",
+        "seconds": 0.879485383319358,
+        "prompt_tokens": 1987,
+        "completion_tokens": 423,
+        "total_tokens": 2410
+      },
+      {
+        "phase": "write_report[codigos_propios]",
+        "seconds": 0.879485383319358,
+        "prompt_tokens": 2900,
+        "completion_tokens": 419,
+        "total_tokens": 3319
+      },
+      {
+        "phase": "write_report[pvp]",
+        "seconds": 0.879485383319358,
+        "prompt_tokens": 1775,
+        "completion_tokens": 408,
+        "total_tokens": 2183
+      },
+      {
+        "phase": "write_report[recetas]",
+        "seconds": 0.879485383319358,
+        "prompt_tokens": 814,
+        "completion_tokens": 87,
+        "total_tokens": 901
+      },
+      {
+        "phase": "write_report[stock]",
+        "seconds": 0.879485383319358,
+        "prompt_tokens": 1350,
+        "completion_tokens": 368,
+        "total_tokens": 1718
+      },
+      {
+        "phase": "write_conclusion",
+        "seconds": 5.3310533000621945,
+        "prompt_tokens": 2342,
+        "completion_tokens": 705,
+        "total_tokens": 3047
+      }
+    ]
+  },
+  {
+    "ax_id": "OF00002_13",
+    "mode": "parallel",
+    "repeat": 2,
+    "total_seconds": 80.48257320001721,
+    "prompt_tokens": 14430,
+    "completion_tokens": 3019,
+    "total_tokens": 17449,
+    "phases": [
+      {
+        "phase": "get_analysis_period",
+        "seconds": 0.41747440001927316,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      {
+        "phase": "get_indicator_data_all",
+        "seconds": 69.55093360017054,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      {
+        "phase": "write_report[devoluciones]",
+        "seconds": 0.9876187999810403,
+        "prompt_tokens": 2918,
+        "completion_tokens": 458,
+        "total_tokens": 3376
+      },
+      {
+        "phase": "write_report[deuda]",
+        "seconds": 0.9876187999810403,
+        "prompt_tokens": 1987,
+        "completion_tokens": 519,
+        "total_tokens": 2506
+      },
+      {
+        "phase": "write_report[codigos_propios]",
+        "seconds": 0.9876187999810403,
+        "prompt_tokens": 2900,
+        "completion_tokens": 559,
+        "total_tokens": 3459
+      },
+      {
+        "phase": "write_report[pvp]",
+        "seconds": 0.9876187999810403,
+        "prompt_tokens": 1775,
+        "completion_tokens": 467,
+        "total_tokens": 2242
+      },
+      {
+        "phase": "write_report[recetas]",
+        "seconds": 0.9876187999810403,
+        "prompt_tokens": 814,
+        "completion_tokens": 97,
+        "total_tokens": 911
+      },
+      {
+        "phase": "write_report[stock]",
+        "seconds": 0.9876187999810403,
+        "prompt_tokens": 1350,
+        "completion_tokens": 414,
+        "total_tokens": 1764
+      },
+      {
+        "phase": "write_conclusion",
+        "seconds": 4.5883126999251544,
+        "prompt_tokens": 2686,
+        "completion_tokens": 505,
+        "total_tokens": 3191
+      }
+    ]
+  },
+  {
+    "ax_id": "OF00002_13",
+    "mode": "parallel",
+    "repeat": 3,
+    "total_seconds": 81.04999590013176,
+    "prompt_tokens": 14062,
+    "completion_tokens": 2635,
+    "total_tokens": 16697,
+    "phases": [
+      {
+        "phase": "get_analysis_period",
+        "seconds": 0.3881771999876946,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      {
+        "phase": "get_indicator_data_all",
+        "seconds": 68.21885950001888,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      {
+        "phase": "write_report[devoluciones]",
+        "seconds": 1.0103645166382194,
+        "prompt_tokens": 2918,
+        "completion_tokens": 407,
+        "total_tokens": 3325
+      },
+      {
+        "phase": "write_report[deuda]",
+        "seconds": 1.0103645166382194,
+        "prompt_tokens": 1987,
+        "completion_tokens": 406,
+        "total_tokens": 2393
+      },
+      {
+        "phase": "write_report[codigos_propios]",
+        "seconds": 1.0103645166382194,
+        "prompt_tokens": 2900,
+        "completion_tokens": 475,
+        "total_tokens": 3375
+      },
+      {
+        "phase": "write_report[pvp]",
+        "seconds": 1.0103645166382194,
+        "prompt_tokens": 1775,
+        "completion_tokens": 401,
+        "total_tokens": 2176
+      },
+      {
+        "phase": "write_report[recetas]",
+        "seconds": 1.0103645166382194,
+        "prompt_tokens": 814,
+        "completion_tokens": 70,
+        "total_tokens": 884
+      },
+      {
+        "phase": "write_report[stock]",
+        "seconds": 1.0103645166382194,
+        "prompt_tokens": 1350,
+        "completion_tokens": 387,
+        "total_tokens": 1737
+      },
+      {
+        "phase": "write_conclusion",
+        "seconds": 6.380659300135449,
+        "prompt_tokens": 2318,
+        "completion_tokens": 489,
+        "total_tokens": 2807
+      }
+    ]
+  }
+]

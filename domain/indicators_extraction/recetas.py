@@ -10,15 +10,18 @@ def filter_conciliacion(df: pd.DataFrame, ax_id: str, start, end) -> str:
     total_recetas = filtered_df["count_total"].sum()
     recetas_sin_conciliar = filtered_df["count_sin_conciliar2"].sum()
     var_per_month = filtered_df.groupby("year_month")["count_sin_conciliar2"].sum()
-    porcentaje_conciliadas = (total_recetas - recetas_sin_conciliar) / total_recetas * 100
-    porcentaje_no_conciliadas = recetas_sin_conciliar / total_recetas * 100
+    if total_recetas:
+        porcentaje_conciliadas = (total_recetas - recetas_sin_conciliar) / total_recetas * 100
+        porcentaje_no_conciliadas = recetas_sin_conciliar / total_recetas * 100
+    else:
+        porcentaje_conciliadas = 0.0
+        porcentaje_no_conciliadas = 0.0
 
     recetas_por_usuario = filtered_df.groupby("usuario")[["count_total", "count_sin_conciliar2"]].sum()
     recetas_por_usuario.reset_index(drop=True, inplace=True)
     recetas_por_usuario["porcentaje_sin_conciliar"] = (
-        recetas_por_usuario["count_sin_conciliar2"].values
-        / recetas_por_usuario["count_total"].values
-    ) * 100
+        recetas_por_usuario["count_sin_conciliar2"] / recetas_por_usuario["count_total"].replace(0, pd.NA)
+    ).fillna(0) * 100
     recetas_por_usuario = recetas_por_usuario.drop(columns=["count_total"])
 
     return (

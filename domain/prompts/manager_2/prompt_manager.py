@@ -1,7 +1,7 @@
-from domain.prompts import debt_prompt, devs_prompt, stock_prompt, conclusion_prompt, recetas_prompt, cp_prompt, pvp_prompt
+from domain.prompts.manager_2 import debt_prompt, devs_prompt, stock_prompt, conclusion_prompt, recetas_prompt, cp_prompt, pvp_prompt
 
 
-class PromptManager:
+class PromptManager2:
     def __init__(self):
         self.debt_prompt = debt_prompt
         self.devs_prompt = devs_prompt
@@ -29,3 +29,8 @@ class PromptManager:
             return self.pvp_prompt
 
         return None
+
+
+if __name__ == "__main__":
+    prompt = PromptManager()
+    print(prompt.get_prompt("deuda"))

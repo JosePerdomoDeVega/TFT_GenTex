@@ -4,7 +4,7 @@ from fastapi.responses import FileResponse
 from applications.conclusion import ConclusionService
 from applications.dependencies import get_pharmacy_repository, get_text_agent
 from domain.interfaces import PharmacyRepository, TextGenerationAgent
-from domain.models import ConclusionRequest, ConclusionResponse
+from domain.models import ConclusionRequest, ConclusionResponse, ValidationRequest
 
 UI_DIR = Path(__file__).parent / "ui"
 _STATIC_MEDIA_TYPES = {".css": "text/css", ".js": "application/javascript", ".svg": "image/svg+xml"}
@@ -43,3 +43,11 @@ async def generate_conclusion(request: ConclusionRequest, repository: PharmacyRe
 
     service = ConclusionService(repository, agent)
     return await service.generate(request)
+
+
+@api_router.post("/conclusions/validate", tags=["conclusions"])
+async def validate_conclusion(request: ValidationRequest, repository: PharmacyRepository = Depends(get_pharmacy_repository), agent: TextGenerationAgent = Depends(get_text_agent)) -> dict[str, str]:
+
+    service = ConclusionService(repository, agent)
+    service.validate(request)
+    return {"status": "saved", "ax_id": request.ax_id}

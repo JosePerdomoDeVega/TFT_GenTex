@@ -13,9 +13,9 @@ def filter_stock(df: pd.DataFrame, ax_id: str, start, end) -> dict[str, Any]:
     total_operaciones = filtered_df["count_operaciones"].sum()
 
     usuario_counts = filtered_df["usuario"].value_counts()
-    usuario_percentages = usuario_counts / usuario_counts.sum() * 100
+    usuario_percentages = usuario_counts / usuario_counts.sum() * 100 if usuario_counts.sum() else usuario_counts * 0.0
     motivo_counts = filtered_df["motivo"].value_counts()
-    motivo_percentages = motivo_counts / motivo_counts.sum() * 100
+    motivo_percentages = motivo_counts / motivo_counts.sum() * 100 if motivo_counts.sum() else motivo_counts * 0.0
 
     return {
         "Variación total de unidades de stock": total_variacion_unidades,

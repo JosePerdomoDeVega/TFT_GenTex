@@ -25,7 +25,7 @@ def filter_chg_pvp(df: pd.DataFrame, ax_id: str, start, end, chg_pvp: pd.DataFra
 
     users_operations = filtered.groupby("usuario")["count"].sum()
     user_mean_chg_price = filtered.groupby("usuario").apply(
-        lambda g: g["dif_pvp"].sum() / g["count"].sum()
+        lambda g: g["dif_pvp"].sum() / g["count"].sum() if g["count"].sum() else 0
     )
 
     var_per_month = filtered.groupby("year_month")["dif_pvp"].sum()

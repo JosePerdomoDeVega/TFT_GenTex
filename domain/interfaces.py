@@ -17,7 +17,7 @@ class PharmacyRepository(ABC):
         pass
 
     @abstractmethod
-    def get_indicator_texts(self, ax_id: str) -> str:
+    def get_indicator_texts(self, ax_id: str) -> dict:
         pass
 
 

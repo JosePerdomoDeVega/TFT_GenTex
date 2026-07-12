@@ -46,6 +46,13 @@ class ConclusionResponse(BaseModel):
     conclusion: str
 
 
+class ValidationRequest(BaseModel):
+
+    ax_id: str
+    reports: list[IndicatorReport]
+    conclusion: str
+
+
 DEFAULT_INDICATORS: tuple[Indicator, ...] = (
     Indicator.devoluciones, Indicator.deuda, Indicator.codigos_propios,
     Indicator.pvp, Indicator.recetas, Indicator.stock,

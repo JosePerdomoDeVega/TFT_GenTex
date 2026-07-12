@@ -17,26 +17,31 @@ def filter_devs(df: pd.DataFrame, ax_id: str, start, end, devs: pd.DataFrame) ->
 
     total_importe_devoluciones = filtered_df["importe_bruto_abs"].sum()
     total_unidades_devueltas = filtered_df["unidades_abs"].sum()
-    precio_medio_devolucion = total_importe_devoluciones / total_unidades_devueltas
+    precio_medio_devolucion = (
+        total_importe_devoluciones / total_unidades_devueltas if total_unidades_devueltas else 0.0
+    )
 
     precio_medio_devolucion_usuario = filtered_df[["usuario", "importe_neto", "unidades"]].groupby("usuario").sum()
     precio_medio_devolucion_usuario["precio_medio_dev"] = (
-        precio_medio_devolucion_usuario["importe_neto"] / precio_medio_devolucion_usuario["unidades"]
-    )
+        precio_medio_devolucion_usuario["importe_neto"] / precio_medio_devolucion_usuario["unidades"].replace(0, pd.NA)
+    ).fillna(0)
     precio_medio_devolucion_usuario["unidades"] = -precio_medio_devolucion_usuario["unidades"]
     precio_medio_devolucion_usuario["importe_neto"] = -precio_medio_devolucion_usuario["importe_neto"]
 
+    filtered_df["unidades_abs"] = (pd.to_numeric(filtered_df["unidades_abs"], errors="coerce").fillna(0))
     top_usuarios_unidades = filtered_df.groupby("usuario")["unidades_abs"].sum().nlargest(3)
-    filtered_df["precio_medio_usuario"] = filtered_df["importe_bruto_abs"] / filtered_df["unidades_abs"]
+    filtered_df["precio_medio_usuario"] = (
+        filtered_df["importe_bruto_abs"] / filtered_df["unidades_abs"].replace(0, pd.NA)
+    ).fillna(0)
 
     total_devs = devs["count_lineas_devs"].sum()
     total_purchases = devs["count_lineas"].sum()
-    ratio_medio_devoluciones = round((total_devs / total_purchases) * 100, 2)
+    ratio_medio_devoluciones = round((total_devs / total_purchases) * 100, 2) if total_purchases else 0.0
 
     top_usuarios_ratio = devs[["usuario", "count_lineas", "count_lineas_devs"]].groupby("usuario").sum()
     top_usuarios_ratio["ratio_devs"] = (
-        top_usuarios_ratio["count_lineas_devs"] / top_usuarios_ratio["count_lineas"] * 100
-    )
+        top_usuarios_ratio["count_lineas_devs"] / top_usuarios_ratio["count_lineas"].replace(0, pd.NA) * 100
+    ).fillna(0)
 
     evolucion_mensual_importe = filtered_df.groupby("year_month")["importe_bruto_abs"].sum()
     cambios_significativos_usuario = (

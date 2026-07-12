@@ -29,7 +29,9 @@ def filter_devs_cp(df: pd.DataFrame, ax_id: str, start, end, devs: pd.DataFrame,
         precio_medio_devolucion = round(total_importe_devoluciones / total_unidades_devueltas, 2)
 
     precio_medio_devolucion_usuario = filtered_df[["usuario", "importe_neto", "unidades"]].groupby("usuario").sum()
-    precio_medio_devolucion_usuario["precio_medio_dev"] = precio_medio_devolucion_usuario["importe_neto"] / precio_medio_devolucion_usuario["unidades"]
+    precio_medio_devolucion_usuario["precio_medio_dev"] = (
+        precio_medio_devolucion_usuario["importe_neto"] / precio_medio_devolucion_usuario["unidades"].replace(0, pd.NA)
+    ).fillna(0)
     precio_medio_devolucion_usuario["unidades"] = -precio_medio_devolucion_usuario["unidades"]
     precio_medio_devolucion_usuario["importe_neto"] = -precio_medio_devolucion_usuario["importe_neto"]
 
@@ -38,14 +40,18 @@ def filter_devs_cp(df: pd.DataFrame, ax_id: str, start, end, devs: pd.DataFrame,
 
     top_usuarios_unidades = filtered_df.groupby("usuario")["unidades_abs"].sum().astype(float).nlargest(3)
 
-    filtered_df["precio_medio_usuario"] = filtered_df["importe_bruto_abs"] / filtered_df["unidades_abs"]
+    filtered_df["precio_medio_usuario"] = (
+        filtered_df["importe_bruto_abs"] / filtered_df["unidades_abs"].replace(0, pd.NA)
+    ).fillna(0)
 
     total_devs = devs["count_lineas_devs_cp"].sum()
     total_purchases = devs["count_lineas"].sum()
-    ratio_medio_devoluciones = round((total_devs / total_purchases) * 100, 2)
+    ratio_medio_devoluciones = round((total_devs / total_purchases) * 100, 2) if total_purchases else 0.0
 
     top_usuarios_ratio = devs[["usuario", "count_lineas", "count_lineas_devs"]].groupby("usuario").sum()
-    top_usuarios_ratio["ratio_devs"] = top_usuarios_ratio["count_lineas_devs"] / top_usuarios_ratio["count_lineas"] * 100
+    top_usuarios_ratio["ratio_devs"] = (
+        top_usuarios_ratio["count_lineas_devs"] / top_usuarios_ratio["count_lineas"].replace(0, pd.NA) * 100
+    ).fillna(0)
 
     evolucion_mensual_importe = filtered_df.groupby("year_month")["importe_bruto_abs"].sum()
     cambios_significativos_usuario = filtered_df.groupby(["usuario", "year_month"])["importe_bruto_abs"].sum().unstack().fillna(0).diff(axis=1)
@@ -56,7 +62,11 @@ def filter_devs_cp(df: pd.DataFrame, ax_id: str, start, end, devs: pd.DataFrame,
     sales = filtered_df[["unidades", "producto_codigo"]].groupby("producto_codigo").sum()
     df_desc = df_desc.groupby("producto_codigo").first()
     sales_desc = pd.merge(sales, df_desc, on="producto_codigo", how="inner")
-    sales_desc["porcentaje"] = round((sales_desc["unidades"].astype(int) / sales_desc["unidades"].astype(int).sum()) * 100, 2)
+    unidades_total = sales_desc["unidades"].astype(int).sum()
+    if unidades_total:
+        sales_desc["porcentaje"] = round((sales_desc["unidades"].astype(int) / unidades_total) * 100, 2)
+    else:
+        sales_desc["porcentaje"] = 0.0
 
     return f"""
         Número total de unidades devueltas: {total_unidades_devueltas:.0f}

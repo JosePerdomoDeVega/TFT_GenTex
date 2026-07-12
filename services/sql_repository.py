@@ -54,6 +54,8 @@ class SqlServerPharmacyRepository(PharmacyRepository):
         with self._connect() as conn:
             start = pd.read_sql("SELECT periodo_inicio FROM analisis WHERE ax_id LIKE ?", conn, params=[ax_id])["periodo_inicio"][0]
             end = pd.read_sql("SELECT periodo_fin FROM analisis WHERE ax_id LIKE ?", conn, params=[ax_id])["periodo_fin"][0]
+            end = pd.Timestamp(end) + pd.offsets.MonthEnd(0)
+
 
         return AnalysisPeriod(start=pd.to_datetime(start), end=pd.to_datetime(end))
 
@@ -108,7 +110,7 @@ class SqlServerPharmacyRepository(PharmacyRepository):
             cursor.execute(merge_sql, (ix_id, ambito, text))
             conn.commit()
 
-    def get_indicator_texts(self, ax_id: str) -> str:
+    def get_indicator_texts(self, ax_id: str) -> dict:
         query = """
             SELECT texto FROM textos
             WHERE ix_id = (
@@ -116,11 +118,11 @@ class SqlServerPharmacyRepository(PharmacyRepository):
                 WHERE ix_id LIKE ? ORDER BY ix_id DESC
             ) AND ambito = 'ANALISIS_IX';
         """
-        texts = ""
+        texts = {}
 
         with self._connect() as conn:
             for indicator in QUERIES:
                 df = pd.read_sql(query, conn, params=[f"{ax_id}-%-{indicator.value}"])
                 if not df.empty:
-                    texts += f"{indicator.value}:\n{df['texto'][0]}\n\n"
+                    texts[indicator.value] = df['texto'][0]
         return texts
